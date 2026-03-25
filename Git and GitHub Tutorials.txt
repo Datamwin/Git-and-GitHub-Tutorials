@@ -1,0 +1,114 @@
+﻿Version Control
+Version control is a system that helps track changes in files over time. It allows multiple people to collaborate, revert to previous versions, and manage code efficiently.
+Git Usage
+* Tracks changes in code
+* Enables collaboration
+* Allows rollback to previous versions
+* Widely used in industry
+Check your git version: 
+* git --version
+ GitHub
+GitHub is a cloud platform that hosts Git repositories, enabling collaboration, sharing, and project management.
+2. Basic Git Configuration
+git config --global user.name "Your Name"
+git config --global user.email "your@email.com"
+Check configuration:
+* git config --list
+3. Creating Your First Repository
+Initialize a Repository
+* mkdir my_project
+* cd my_project
+* echo “Project Title” >> README.md
+* git init
+* git add README.md
+* git commit -m "intuitive commit message”
+* git branch -m main 
+* git remote add origin {repo_url}
+* git push -u origin main 
+Note: mkdir: creates a folder, cd: moves into the folder, git init: initializes Git tracking
+
+
+4. Git Workflow Basics
+Key Concepts:
+* Working Directory
+* Staging Area
+* Repository
+Add Files
+git add file.txt
+Add All Files
+git add .
+Commit Changes
+git commit -m "Initial commit"
+Note: git add: moves changes to staging area, git commit: saves snapshot of changes
+5. Checking Status and History
+Check Status
+git status
+View Commit History
+git log
+Short log:
+git log --oneline
+
+
+Restore changes made to a file
+git restore file name
+6. Working with Branches
+Create a Branch
+git branch branch_name
+Switch Branch
+git checkout feature-branch or git switch branch_name
+Create and Switch
+git checkout -b feature-branch
+Merge Branch
+git checkout main
+git merge feature-branch
+
+
+Push to GitHub
+git push -u origin main
+
+
+7.Cloning a Repository
+git clone: repo_url
+8. Pulling Updates
+git pull origin main
+9. Pushing Changes
+git push origin main
+11. Handling Merge Conflicts
+When conflicts occur:
+* Git marks conflicting sections
+Example:
+<<<<<<< HEAD
+Your changes
+=======
+Incoming changes
+>>>>>>> branch-name
+Resolve by:
+* Editing the file
+* Removing markers
+* Committing again
+12. .gitignore File
+Used to ignore files/folders:
+Example:
+node_modules/
+.env
+*.log
+13. Undoing Changes
+Unstage File
+git reset file.txt
+Discard Changes
+git checkout -- file.txt
+Revert Commit
+git revert <commit_id>
+
+
+
+
+Practice
+Task:
+1. Create a project folder
+2. Initialize Git
+3. Add a README.md file
+4. Make at least 3 commits
+5. Create a branch and modify the project
+6. Merge branch into main
+7. Push project to GitHub
